@@ -1,0 +1,35 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title>api</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col  *ngFor="let c of characters"size-lg="6" sizeMd="6" sizeSm="6" size="12">
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col  size-lg="4" sizeMd="4" sizeSm="4" size="12">
+                  <ion-avatar>
+                    <ion-img [src]="c.image"/>
+                  </ion-avatar>
+                </ion-col>
+                <ion-col  size-lg="8" sizeMd="8" sizeSm="8" size="12">
+                  <div>
+                    {{c.mane}}
+                  </div>
+                  <p>visto por primera vez{{c.nombre.origen}}</p>
+                </ion-col>
+
+              </ion-row>
+            </ion-grid>
+            
+          </ion-card>
+        </ion-col>
+      </ion-row>>
+    </ion-grid>
+  </div>
+</ion-content>
